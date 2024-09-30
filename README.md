@@ -76,6 +76,7 @@ fit <- stl(plastics, s.window = "periodic")
                         breaks=c("Data","Seasonally Adjusted","Trend"))
  
 ```
+![image](https://github.com/user-attachments/assets/028cc8b4-370e-4067-964d-76761fe29f5b)
 
 6. Does it make any difference if the outlier is near the end rather than in the middle of the time series?
 
@@ -98,3 +99,4 @@ fit <- stl(plastics, s.window = "periodic")
                         breaks=c("Data","Seasonally Adjusted","Trend"))
   
 ```
+![image](https://github.com/user-attachments/assets/33810a8d-e3bf-4117-b589-71466da4aedf)
