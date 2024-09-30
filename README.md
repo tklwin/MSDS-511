@@ -2,6 +2,8 @@
 Time-Series Data Analysis and Forecasting for Business and Finance
 
 ### Question
+![image](https://github.com/user-attachments/assets/a08258ed-d29e-44ee-943e-c750ee3d61e8)
+
 The `plastics` data set consists of the monthly sales (in thousands) of product A for a plastics manufacturer for five years.
 
 1. Plot the time series of sales of product A. Can you identify seasonal fluctuations and/or a trend-cycle?
