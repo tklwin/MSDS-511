@@ -25,3 +25,6 @@ Time-Series Data Analysis and Forecasting for Business and Finance
 fit <- stl(plastics, s.window = "periodic")
 
 ### Header3
+
+
+`rm /usr/tklwin`
