@@ -23,8 +23,18 @@ Time-Series Data Analysis and Forecasting for Business and Finance
   help("plastics")
 # Perform STL decomposition
 fit <- stl(plastics, s.window = "periodic")
-
+```
 ### Header3
 
 
 `rm /usr/tklwin`
+
+
+## heading 2
+
+```
+  chmod +rw test.sh
+  ls -la
+  ```
+
+  ### heading 3
