@@ -24,4 +24,4 @@ Time-Series Data Analysis and Forecasting for Business and Finance
 # Perform STL decomposition
 fit <- stl(plastics, s.window = "periodic")
 
-
+### Header3
