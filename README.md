@@ -35,7 +35,7 @@ plastics %>% decompose(type="multiplicative") %>%
 
 3. Do the results support the graphical interpretation from part a?
 
-<span style="color:orange;">[Answer] Yes, the results support the graphical interpretation from part a.
+<span style="color:red;">[Answer] Yes, the results support the graphical interpretation from part a.
 </span>
 
 
