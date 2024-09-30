@@ -29,6 +29,7 @@ fit <- stl(plastics, s.window = "periodic")
 
 `rm /usr/tklwin`
 
+<<<<<<< HEAD
 
 ## heading 2
 
@@ -38,3 +39,7 @@ fit <- stl(plastics, s.window = "periodic")
   ```
 
   ### heading 3
+=======
+`test` use git stest
+
+>>>>>>> 569918d06d13c88eebe11bb3f277ffdf073c6787
