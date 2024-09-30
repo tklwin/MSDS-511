@@ -19,7 +19,7 @@ autoplot(plastics) + xlab("Year") + ylab("Sales") +
   ```
 ![image](https://github.com/user-attachments/assets/9f3bf92e-5e95-4d65-ab26-dd5123a75569)
 
-[Answer] Yes, there is seasonal fluctuations.
+>>[Answer] Yes, there is seasonal fluctuations.
 
 2. Use a classical multiplicative decomposition to calculate the trend-cycle and seasonal indices.
 
@@ -33,7 +33,7 @@ plastics %>% decompose(type="multiplicative") %>%
 
 3. Do the results support the graphical interpretation from part a?
 
-[Answer] Yes, the results support the graphical interpretation from part a.
+>>[Answer] Yes, the results support the graphical interpretation from part a.
 
 
 4. Compute and plot the seasonally adjusted data.
