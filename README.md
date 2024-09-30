@@ -19,6 +19,8 @@ autoplot(plastics) + xlab("Year") + ylab("Sales") +
   ```
 ![image](https://github.com/user-attachments/assets/9f3bf92e-5e95-4d65-ab26-dd5123a75569)
 
+[Answer] Yes, there is seasonal fluctuations.
+
 2. Use a classical multiplicative decomposition to calculate the trend-cycle and seasonal indices.
 
   ```r
@@ -31,6 +33,10 @@ plastics %>% decompose(type="multiplicative") %>%
 
 3. Do the results support the graphical interpretation from part a?
 
+[Answer] Yes, the results support the graphical interpretation from part a.
+
+
+4. Compute and plot the seasonally adjusted data.
 ```r
 help("plastics")
 # Perform STL decomposition
@@ -48,8 +54,6 @@ fit <- stl(plastics, s.window = "periodic")
 
 ```
 ![image](https://github.com/user-attachments/assets/4678972e-59e4-43d1-a48c-c2638e826a2c)
-
-4. Compute and plot the seasonally adjusted data.
 
 5. Change one observation to be an outlier (e.g., add 500 to one observation), and recompute the seasonally adjusted data. What is the effect of the outlier?
 
