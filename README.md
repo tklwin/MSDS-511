@@ -35,7 +35,9 @@ plastics %>% decompose(type="multiplicative") %>%
 
 3. Do the results support the graphical interpretation from part a?
 
-[Answer] Yes, the results support the graphical interpretation from part a.
+<span style="color:orange;">[Answer] Yes, the results support the graphical interpretation from part a.
+</span>
+
 
 
 4. Compute and plot the seasonally adjusted data.
@@ -102,3 +104,5 @@ fit <- stl(plastics, s.window = "periodic")
   
 ```
 ![image](https://github.com/user-attachments/assets/33810a8d-e3bf-4117-b589-71466da4aedf)
+
+
