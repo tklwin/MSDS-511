@@ -17,3 +17,11 @@ Time-Series Data Analysis and Forecasting for Business and Finance
       ggtitle("Monthly sales of product A for a plastics manufacturer")
     ```
    ![image](https://github.com/user-attachments/assets/7f95fa21-1567-47a2-bd49-65b887a8890f)
+
+2. Use a classical multiplicative decomposition to calculate the trend-cycle and seasonal indices.
+  ```r
+  help("plastics")
+# Perform STL decomposition
+fit <- stl(plastics, s.window = "periodic")
+
+
