@@ -17,6 +17,7 @@ library(forecast)
 autoplot(plastics) + xlab("Year") + ylab("Sales") +
   ggtitle("Monthly sales of product A for a plastics manufacturer")
   ```
+![image](https://github.com/user-attachments/assets/9f3bf92e-5e95-4d65-ab26-dd5123a75569)
 
 2. Use a classical multiplicative decomposition to calculate the trend-cycle and seasonal indices.
 
@@ -26,6 +27,7 @@ plastics %>% decompose(type="multiplicative") %>%
   autoplot() + xlab("Year") +
   ggtitle("Classical multiplicative decomposition of sales of product A for a plastic manufacturer")
   ```
+![image](https://github.com/user-attachments/assets/7c2785ca-1786-44f2-b6e0-5e5d846854cc)
 
 3. Do the results support the graphical interpretation from part a?
 
@@ -45,6 +47,7 @@ fit <- stl(plastics, s.window = "periodic")
                       breaks=c("Data","Seasonally Adjusted","Trend"))
 
 ```
+![image](https://github.com/user-attachments/assets/4678972e-59e4-43d1-a48c-c2638e826a2c)
 
 4. Compute and plot the seasonally adjusted data.
 
