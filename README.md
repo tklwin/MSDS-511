@@ -8,20 +8,20 @@ The `plastics` data set consists of the monthly sales (in thousands) of product 
 
 1. Plot the time series of sales of product A. Can you identify seasonal fluctuations and/or a trend-cycle?
 
-  ```r
-library(seasonal)
-library(fpp)
-library(fpp2)
-library(forecast)
+      ```r
+    library(seasonal)
+    library(fpp)
+    library(fpp2)
+    library(forecast)
 
 
-#Monthly sales of product A for a plastics manufacturer
-autoplot(plastics) + xlab("Year") + ylab("Sales") +
-  ggtitle("Monthly sales of product A for a plastics manufacturer")
-  ```
-![image](https://github.com/user-attachments/assets/9f3bf92e-5e95-4d65-ab26-dd5123a75569)
+    #Monthly sales of product A for a plastics manufacturer
+    autoplot(plastics) + xlab("Year") + ylab("Sales") +
+      ggtitle("Monthly sales of product A for a plastics manufacturer")
+      ```
+    ![image](https://github.com/user-attachments/assets/9f3bf92e-5e95-4d65-ab26-dd5123a75569)
 
-[Answer] Yes, there is seasonal fluctuations.
+    [Answer] Yes, there is seasonal fluctuations.
 
 2. Use a classical multiplicative decomposition to calculate the trend-cycle and seasonal indices.
 
@@ -35,9 +35,7 @@ plastics %>% decompose(type="multiplicative") %>%
 
 3. Do the results support the graphical interpretation from part a?
 
-<span style="color:red;">[Answer] Yes, the results support the graphical interpretation from part a.</span>
-
-
+[Answer] Yes, the results support the graphical interpretation from part a.
 
 4. Compute and plot the seasonally adjusted data.
 ```r
