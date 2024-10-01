@@ -98,4 +98,8 @@ The `plastics` data set consists of the monthly sales (in thousands) of product 
     ```
     ![image](https://github.com/user-attachments/assets/33810a8d-e3bf-4117-b589-71466da4aedf)
 
-
+```shell
+dir
+ls -la
+./ run.sh
+```
