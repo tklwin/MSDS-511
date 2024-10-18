@@ -1,3 +1,4 @@
+```r
 # Load required libraries
 library(dplyr)
 library(tidyr)
@@ -170,3 +171,4 @@ ggplot(country, aes(x = confirmed, y = recovered)) +
   theme_minimal()
 
 #__________________________________________________________________
+```
