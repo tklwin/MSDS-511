@@ -1,3 +1,8 @@
+## Question
+### [Link for datasets](https://data.world/shad/covid-19-time-series-data)
+
+#### 1. Data Import and Exploration
+
 ```r
 # Load required libraries
 library(dplyr)
@@ -49,6 +54,9 @@ country <- country %>% group_by(`Country/Region`) %>% mutate(cumconfirmed=cumsum
 
 # Aggregate at world level
 world <- country %>% group_by(date) %>% summarize(confirmed=sum(confirmed), cumconfirmed=sum(cumconfirmed), deaths=sum(deaths), recovered=sum(recovered)) %>% mutate(days = date - first(date) + 1)
+```
+### 2. Data Visualization
+```r
 
 #__________________________________________________________________
 
@@ -61,7 +69,10 @@ world %>% select(-cumconfirmed) %>% gather("Type", "Cases", -c(date, days)) %>%
   theme_classic() +
   labs(title = "Covid-19 Global Cases, Deaths & Recoveries", x= "Date", y= "Daily cases") +
   theme(plot.title = element_text(hjust = 0.5))
+```
+![alt text](image.png)
 
+```r
 # Global trends
 global_trends <- country %>%
   group_by(date) %>%
@@ -78,6 +89,10 @@ ggplot(global_trends, aes(x = as.Date(date))) +
   geom_line(aes(y = Total_Recovered, color = "Recovered")) +
   labs(title = "Global COVID-19 Trends Over Time", x = "Date", y = "Count") +
   theme_minimal()
+```
+![alt text](image-1.png)
+
+```r
 
 # Total cases by country
 country_totals <- country %>%
@@ -95,7 +110,9 @@ ggplot(country_totals, aes(x = reorder(`Country/Region`, -Total_Confirmed), y = 
   labs(title = "Total COVID-19 Cases by Country", x = "Country/Region", y = "Total Confirmed Cases") +
   theme_minimal()
 
-
+```
+![alt text](image-2.png)
+```r
 # Pie chart for total confirmed cases by top 10 country
 top_countries <- country_totals %>%
   top_n(10, Total_Confirmed)
@@ -108,7 +125,10 @@ ggplot(top_countries, aes(x = "", y = Total_Confirmed, fill = `Country/Region`))
   coord_polar(theta = "y") +
   labs(title = "Total COVID-19 Cases by Country (Top 10)", x = "", y = "") +
   theme_minimal()
+```
+![alt text](image-3.png)
 
+```r
 # Extract specific country: Italy 
 italy <- country %>% filter(`Country/Region`=="Italy")
 
@@ -119,7 +139,11 @@ ggplot(italy, aes(x=date, y=confirmed)) + geom_bar(stat="identity", width=0.1) +
   theme(plot.title = element_text(hjust = 0.5))
 
 #__________________________________________________________________
+```
+![alt text](image-4.png)
 
+### 3. Time Series Analysis
+```r
 # Instruction 3 Time Series Analysis
 
 # Calculate daily changes and growth rates
@@ -162,7 +186,10 @@ ggplot(country, aes(x = confirmed, y = deaths)) +
   geom_smooth(method = "lm", se = TRUE) +
   labs(title = "Correlation between Confirmed Cases and Deaths", x = "Confirmed Cases", y = "Deaths") +
   theme_minimal()
-
+```
+![alt text](image-5.png)
+#### Interpretation: 
+```r
 # Plot correlation between confirmed cases and recovered
 ggplot(country, aes(x = confirmed, y = recovered)) +
   geom_point() +
@@ -172,3 +199,5 @@ ggplot(country, aes(x = confirmed, y = recovered)) +
 
 #__________________________________________________________________
 ```
+![alt text](image-6.png)
+#### Interpretation:
