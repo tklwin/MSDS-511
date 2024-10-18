@@ -57,9 +57,6 @@ world <- country %>% group_by(date) %>% summarize(confirmed=sum(confirmed), cumc
 ```
 ### 2. Data Visualization
 ```r
-
-#__________________________________________________________________
-
 # Instruction 2 Data Visualization:
 
 # visualize the progression of COVID-19 cases, deaths, and recoveries over time
@@ -137,8 +134,6 @@ ggplot(italy, aes(x=date, y=confirmed)) + geom_bar(stat="identity", width=0.1) +
   theme_classic() +
   labs(title = "Covid-19 Confirmed Cases in Italy", x= "Date", y= "Daily confirmed cases") +
   theme(plot.title = element_text(hjust = 0.5))
-
-#__________________________________________________________________
 ```
 ![alt text](image-4.png)
 
@@ -196,8 +191,6 @@ ggplot(country, aes(x = confirmed, y = recovered)) +
   geom_smooth(method = "lm", se = TRUE) +
   labs(title = "Correlation between Confirmed Cases and Recovered", x = "Confirmed Cases", y = "Recovered") +
   theme_minimal()
-
-#__________________________________________________________________
 ```
 ![alt text](image-6.png)
 #### Interpretation: The plot shows positive correlation between confirmed cases and recovered cases. But the relationship is not perfectly linear and there are other factors that can influence the recovery rate.
