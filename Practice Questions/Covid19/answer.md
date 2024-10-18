@@ -188,7 +188,7 @@ ggplot(country, aes(x = confirmed, y = deaths)) +
   theme_minimal()
 ```
 ![alt text](image-5.png)
-#### Interpretation: 
+#### Interpretation: The plot shows positive correlation between confirmed cases and deaths. When the confirmed cases increase, the number of deaths tends to increase.
 ```r
 # Plot correlation between confirmed cases and recovered
 ggplot(country, aes(x = confirmed, y = recovered)) +
@@ -200,4 +200,4 @@ ggplot(country, aes(x = confirmed, y = recovered)) +
 #__________________________________________________________________
 ```
 ![alt text](image-6.png)
-#### Interpretation:
+#### Interpretation: The plot shows positive correlation between confirmed cases and recovered cases. 
