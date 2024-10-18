@@ -1,7 +1,7 @@
 ## Question
 ### [Link for datasets](https://data.world/shad/covid-19-time-series-data)
 
-#### 1. Data Import and Exploration
+### 1. Data Import and Exploration
 
 ```r
 # Load required libraries
